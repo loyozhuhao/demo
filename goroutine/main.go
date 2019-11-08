@@ -14,11 +14,12 @@ func say(s string) {
 }
 
 func main() {
-num:=runtime.NumCPU()
-fmt.Println(num)
-runtime.GOMAXPROCS(1)
-	go say("world")
-	 say("hello")
+	num := runtime.NumCPU()
+	fmt.Println(num)
+	runtime.GOMAXPROCS(4)
 
-	fmt.Println("NumGoroutine",runtime.NumGoroutine())
+	go say("world")
+	say("hello")
+
+	fmt.Println("NumGoroutine", runtime.NumGoroutine())
 }
