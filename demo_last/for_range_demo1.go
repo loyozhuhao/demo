@@ -5,6 +5,8 @@ import (
 	"log"
 )
 
+//http://note.youdao.com/noteshare?id=a8176cae082664c88a514c4cb7e7b8fa
+
 type T struct{ n int }
 
 func main() {
